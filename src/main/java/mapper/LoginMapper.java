@@ -4,5 +4,6 @@ import po.Staff;
 
 
 public interface LoginMapper {
-	Staff getpwdbyname(String name);
+
+    Staff getpwdbyname(String name);
 }
