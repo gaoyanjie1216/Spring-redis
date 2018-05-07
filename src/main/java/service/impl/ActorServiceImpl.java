@@ -25,6 +25,7 @@ public class ActorServiceImpl implements ActorService {
     @Autowired
     public ActorMapper actorMapper;
 
+    //一般读取方法需要添加@Cacheable，而删除需要使用@CacheEvict，添加和修改使用@CachePut，以防止失效的缓存数据在前端进行了展示
     @Cacheable(value = "getActorByid", key = "#id")   //建立缓存
     public Actor getActorByid(short id) {
         Actor a = actorMapper.getactorbyid(id);
