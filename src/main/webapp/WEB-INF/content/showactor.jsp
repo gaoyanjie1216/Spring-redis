@@ -105,6 +105,12 @@
         });
     });
 
+
+    $("#add").click(function () {
+        console.log(3424)
+        $(".addmodal").modal();
+    });
+
     $(document).ready(function () {
         $("#add").click(function () {
             $(".addmodal").modal();
